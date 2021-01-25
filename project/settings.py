@@ -82,14 +82,25 @@ WSGI_APPLICATION = 'wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-from . import database
+ATABASES = {
 
-from . import database
+    'default': {
 
-DATABASES = {
-    'default': database.config()
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': ‘postgresql’,
+
+        'USER': 'adil',
+
+        'PASSWORD': 'admin123',
+
+        'HOST': '',
+
+        'PORT': '5432',
+
+    }
+
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
